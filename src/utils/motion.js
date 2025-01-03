@@ -68,3 +68,17 @@ export const headContainerAnimation = {
   animate: { x: 0, opacity: 1, transition: { ...transition, delay: 0 } },
   exit: { x: -100, opacity: 0, transition: { ...transition, delay: 0 } },
 };
+
+export const logoAnimation = {
+  initial: { opacity: 0, scale: 0.5 },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1, ease: "easeOut" },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.5,
+    transition: { duration: 0.5, ease: "easeIn" },
+  },
+};
