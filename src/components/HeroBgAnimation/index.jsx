@@ -54,7 +54,7 @@ const techLogos = [
   {
     id: 8,
     href: "#path_8",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+    src: "https://i.imghippo.com/files/mdA4962hHM.png",
     duration: "17s",
     delay: "7s",
   },
