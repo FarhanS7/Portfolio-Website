@@ -1,0 +1,141 @@
+import React from "react";
+import { Div } from "./HeroBgAnimationStyle";
+
+const techLogos = [
+  {
+    id: 1,
+    href: "#path_1",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    duration: "10s",
+    delay: "0s",
+  },
+  {
+    id: 2,
+    href: "#path_2",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    duration: "12s",
+    delay: "1s",
+  },
+  {
+    id: 3,
+    href: "#path_3",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    duration: "14s",
+    delay: "2s",
+  },
+  {
+    id: 4,
+    href: "#path_4",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    duration: "16s",
+    delay: "3s",
+  },
+  {
+    id: 5,
+    href: "#path_5",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+    duration: "18s",
+    delay: "4s",
+  },
+  {
+    id: 6,
+    href: "#path_6",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
+    duration: "20s",
+    delay: "5s",
+  },
+  {
+    id: 7,
+    href: "#path_7",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    duration: "22s",
+    delay: "6s",
+  },
+  {
+    id: 8,
+    href: "#path_8",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+    duration: "24s",
+    delay: "7s",
+  },
+  {
+    id: 9,
+    href: "#path_9",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    duration: "26s",
+    delay: "8s",
+  },
+];
+
+const HeroBgAnimation = () => (
+  <Div>
+    <svg
+      className="BgAnimation__svg"
+      viewBox="0 0 1000 1000"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        {/* Soft Gradient Background Animation */}
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style={{ stopColor: "#4e54c8", stopOpacity: 1 }} />
+          <stop
+            offset="100%"
+            style={{ stopColor: "#8f94fb", stopOpacity: 1 }}
+          />
+        </linearGradient>
+      </defs>
+
+      {/* Gradient Background Animation */}
+      <rect width="100%" height="100%" fill="url(#grad1)">
+        <animate
+          attributeName="x"
+          values="0;1000;0"
+          dur="30s"
+          repeatCount="indefinite"
+        />
+      </rect>
+
+      {/* Floating Tech Logos */}
+      {techLogos.map((logo) => (
+        <image
+          key={logo.id}
+          href={logo.src}
+          width="80"
+          height="80"
+          style={{
+            filter: "drop-shadow(0 0 10px rgba(255,255,255,0.8))",
+            opacity: 0.8,
+            animation: `moveLogo ${logo.duration} ease-in-out infinite`,
+            position: "absolute",
+            left: `${Math.random() * 90}vw`, // Random start position
+            top: `${Math.random() * 90}vh`, // Random start position
+          }}
+        >
+          <animateMotion
+            dur={logo.duration}
+            begin={logo.delay}
+            repeatCount="indefinite"
+            keyTimes="0;1"
+            values="0,0;100,100;200,0"
+            keySplines="0.25 0.1 0.25 1"
+            calcMode="spline"
+          >
+            <mpath href={logo.href} />
+          </animateMotion>
+        </image>
+      ))}
+    </svg>
+
+    {/* CSS for smooth floating logos */}
+    <style>{`
+      @keyframes moveLogo {
+        0% { transform: translate(0, 0); }
+        50% { transform: translate(100px, 100px); }
+        100% { transform: translate(200px, 0); }
+      }
+    `}</style>
+  </Div>
+);
+
+export default HeroBgAnimation;
