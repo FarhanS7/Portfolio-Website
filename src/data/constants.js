@@ -274,7 +274,7 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/neurobit.jpeg?alt=media&token=1cacbb7b-e5ea-4efb-9b3d-f5a31b9564ad",
+    img: "https://i.imghippo.com/files/ooX6468LRw.png",
     role: "Junior Frontend Engineer",
     company: "Nexite",
     date: "Jan 2025 - Present",
@@ -622,11 +622,35 @@ export const projects = [
     date: "Jan 2025",
     description:
       "A full stack restaurant app with great UI build with advanced technologies",
-    image:
-      "https://github.com/rishavchanda/DecisionHub/raw/master/assets/testRule.jpg",
+    image: "https://i.imghippo.com/files/gkYW4302Osk.png",
     tags: ["React Js", , "Node Js", "Express Js", "Redux", "React Flow"],
     category: "web app",
     github: "https://github.com/FarhanS7/Resturant-Frontend",
     webapp: "https://resturant-frontend-pi.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "Pixo",
+    date: "Jan 2025",
+    description:
+      "A full stack Social Media  website with great UI build with advanced technologies",
+    image:
+      "https://github.com/rishavchanda/DecisionHub/raw/master/assets/testRule.jpg",
+    tags: ["React Js", , "Node Js", "Express Js", "Redux", "React Flow"],
+    category: "web app",
+    github: "https://github.com/FarhanS7/Pixo-FrontEnd",
+    webapp: "https://pixo-front-end.vercel.app/",
+  },
+  {
+    id: 3,
+    title: "Blog",
+    date: "Jan 2025",
+    description:
+      "A full stack Blog  website with great UI build with advanced technologies",
+    image: "https://i.imghippo.com/files/yen4092BU.png",
+    tags: ["React Js", , "Node Js", "Express Js", "Redux", "React Flow"],
+    category: "web app",
+    github: "https://github.com/FarhanS7/Blog-Frontend",
+    webapp: "https://blog-frontend-two-tan.vercel.app/",
   },
 ];
